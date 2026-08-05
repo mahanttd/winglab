@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.6 seconds
-Output:
 # WingLab
 
 WingLab is an interactive educational wing-analysis application for students,
@@ -44,12 +41,12 @@ No backend, database, account, or external API is required for the MVP.
 
 ## Product routes
 
-- `/` â€” product overview and model boundaries
-- `/simulator` â€” geometry, condition, visualization, performance, saving, JSON,
+- `/` — product overview and model boundaries
+- `/simulator` — geometry, condition, visualization, performance, saving, JSON,
   and print/PDF workflow
-- `/compare` â€” comparison of locally saved studies
-- `/validation` â€” formula reference, numerical tolerances, and benchmark outputs
-- `/methodology` â€” equations, coefficient policy, confidence system, and limits
+- `/compare` — comparison of locally saved studies
+- `/validation` — formula reference, numerical tolerances, and benchmark outputs
+- `/methodology` — equations, coefficient policy, confidence system, and limits
 
 ## Formula list
 
@@ -58,20 +55,20 @@ All calculations are performed internally in SI units.
 - Weight: `W = m g`
 - Rectangular area: `S = b c`
 - Tapered area: `S = b (cr + ct) / 2`
-- Aspect ratio: `AR = bÂ² / S`
+- Aspect ratio: `AR = b² / S`
 - Mean aerodynamic chord:
-  `MAC = (2/3) cr (1 + Î» + Î»Â²) / (1 + Î»)`
-- Reynolds number: `Re = Ï V MAC / Î¼`
-- Dynamic pressure: `q = 0.5 Ï VÂ²`
+  `MAC = (2/3) cr (1 + λ + λ²) / (1 + λ)`
+- Reynolds number: `Re = ρ V MAC / μ`
+- Dynamic pressure: `q = 0.5 ρ V²`
 - Lift: `L = q S CL`
 - Required lift coefficient: `CLrequired = W / (q S)`
-- Estimated one-g stall speed: `Vs = sqrt(2W / (Ï S CLmax))`
-- Induced drag coefficient: `CDi = CLÂ² / (Ï€ e AR)`
+- Estimated one-g stall speed: `Vs = sqrt(2W / (ρ S CLmax))`
+- Induced drag coefficient: `CDi = CL² / (π e AR)`
 - Total drag coefficient: `CD = CD0 + CDi`
 - Drag: `D = q S CD`
 - Lift-to-drag ratio: `CL/CD`, checked against `L/D`
 - Idealized glide angle: `atan(D/L)`
-- Educational linear lift model: `CL = CL0 + a Î±`, capped at `CLmax`
+- Educational linear lift model: `CL = CL0 + a α`, capped at `CLmax`
 
 ## Model assumptions
 
@@ -119,5 +116,4 @@ controllable, structurally safe, or flight-ready behavior.
 - mission-specific comparison views
 - optional persistence export/import bundles
 - higher-fidelity whole-aircraft drag accounting
-
 
